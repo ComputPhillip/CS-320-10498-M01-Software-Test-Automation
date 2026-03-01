@@ -1,2 +1,8 @@
-# CS-320-10498-M01-Software-Test-Automation
-A portfolio to showcase software test and automation
+How can I ensure that my code, program, or software is functional and secure?
+I make sure my software is functional by testing early and often, instead of waiting until the end. I verify each feature works the way it’s supposed to and I use small test cases to catch bugs before they spread into the rest of the project. To keep the software secure, I focus on safe coding habits like validating inputs, avoiding hardcoded secrets, using secure libraries, and keeping dependencies updated. I also try to think like an attacker during development by asking, “What could go wrong if someone misuses this?” so I can prevent common issues before they happen.
+
+How do I interpret user needs and incorporate them into a program?
+I interpret user needs by turning their requests into clear requirements and goals. I look at what the user is trying to accomplish, not just the exact words they use, and then I break that into specific features the program must support. After that, I prioritize the most important needs first and build around them. I also try to confirm my understanding by checking that what I’m building actually matches the expected outcome, especially through small prototypes or milestones that show progress and allow changes before the project is too far along.
+
+How do I approach designing software?
+I approach designing software by starting with the requirements and planning the structure before writing full code. I break the project into modules or components and decide what each part is responsible for, so everything isn’t mixed together. Then I design how the components communicate, keeping it simple and organized. My goal is to build a design that is easy to maintain, easy to test, and flexible enough to update later if the requirements change.
