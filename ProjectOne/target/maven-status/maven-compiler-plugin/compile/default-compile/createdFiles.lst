@@ -1,0 +1,8 @@
+org\snhu\cs320\ContactService.class
+com\example\services\ContactService.class
+org\snhu\cs320\Contact.class
+com\example\services\Contact.class
+org\snhu\cs320\Task.class
+org\snhu\cs320\TaskService.class
+com\example\services\TaskService.class
+com\example\services\AppointmentService.class

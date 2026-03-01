@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+projectone,org.snhu.cs320,Contact,0,136,0,16,0,40,0,22,0,14
+projectone,org.snhu.cs320,Task,0,88,0,12,0,27,0,15,0,9
+projectone,org.snhu.cs320,AppointmentService,0,93,0,12,0,24,0,11,0,5
+projectone,org.snhu.cs320,TaskService,21,84,4,8,4,24,4,9,0,7
+projectone,org.snhu.cs320,ContactService,21,98,4,8,4,28,4,11,0,9
+projectone,org.snhu.cs320,Appointment,0,88,0,12,0,23,0,13,0,7
+projectone,com.example.services,Appointment,0,88,0,12,0,23,0,13,0,7
+projectone,com.example.services,AppointmentService,0,93,0,12,0,24,0,11,0,5
+projectone,com.example.services,Task,0,88,0,12,0,27,0,15,0,9
+projectone,com.example.services,Contact,0,136,0,16,0,40,0,22,0,14
+projectone,com.example.services,TaskService,21,84,4,8,4,24,4,9,0,7
+projectone,com.example.services,ContactService,21,98,4,8,4,28,4,11,0,9

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Contact.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">projectone</a> &gt; <a href="index.source.html" class="el_package">com.example.services</a> &gt; <span class="el_source">Contact.java</span></div><h1>Contact.java</h1><pre class="source lang-java linenums">package com.example.services;
+
+public final class Contact {
+	private final String contactId;
+	private String firstName;
+	private String lastName;
+	private String phone;
+	private String address;
+
+<span class="fc" id="L10">	public Contact(String contactId, String firstName, String lastName, String phone, String address) {</span>
+<span class="fc" id="L11">		this.contactId = validateId(contactId);</span>
+<span class="fc" id="L12">		this.firstName = validateName(firstName, &quot;firstName&quot;);</span>
+<span class="fc" id="L13">		this.lastName = validateName(lastName, &quot;lastName&quot;);</span>
+<span class="fc" id="L14">		this.phone = validatePhone(phone);</span>
+<span class="fc" id="L15">		this.address = validateAddress(address);</span>
+<span class="fc" id="L16">	}</span>
+
+	public String getContactId() {
+<span class="fc" id="L19">		return contactId;</span>
+	}
+
+	public String getFirstName() {
+<span class="fc" id="L23">		return firstName;</span>
+	}
+
+	public String getLastName() {
+<span class="fc" id="L27">		return lastName;</span>
+	}
+
+	public String getPhone() {
+<span class="fc" id="L31">		return phone;</span>
+	}
+
+	public String getAddress() {
+<span class="fc" id="L35">		return address;</span>
+	}
+
+	public void setFirstName(String firstName) {
+<span class="fc" id="L39">		this.firstName = validateName(firstName, &quot;firstName&quot;);</span>
+<span class="fc" id="L40">	}</span>
+
+	public void setLastName(String lastName) {
+<span class="fc" id="L43">		this.lastName = validateName(lastName, &quot;lastName&quot;);</span>
+<span class="fc" id="L44">	}</span>
+
+	public void setPhone(String phone) {
+<span class="fc" id="L47">		this.phone = validatePhone(phone);</span>
+<span class="fc" id="L48">	}</span>
+
+	public void setAddress(String address) {
+<span class="fc" id="L51">		this.address = validateAddress(address);</span>
+<span class="fc" id="L52">	}</span>
+
+	private static String validateId(String contactId) {
+<span class="fc bfc" id="L55" title="All 2 branches covered.">		if (contactId == null) {</span>
+<span class="fc" id="L56">			throw new IllegalArgumentException(&quot;contactId must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L58" title="All 2 branches covered.">		if (contactId.length() &gt; 10) {</span>
+<span class="fc" id="L59">			throw new IllegalArgumentException(&quot;contactId must be 10 characters or fewer&quot;);</span>
+		}
+<span class="fc" id="L61">		return contactId;</span>
+	}
+
+	private static String validateName(String value, String fieldName) {
+<span class="fc bfc" id="L65" title="All 2 branches covered.">		if (value == null) {</span>
+<span class="fc" id="L66">			throw new IllegalArgumentException(fieldName + &quot; must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L68" title="All 2 branches covered.">		if (value.length() &gt; 10) {</span>
+<span class="fc" id="L69">			throw new IllegalArgumentException(fieldName + &quot; must be 10 characters or fewer&quot;);</span>
+		}
+<span class="fc" id="L71">		return value;</span>
+	}
+
+	private static String validatePhone(String phone) {
+<span class="fc bfc" id="L75" title="All 2 branches covered.">		if (phone == null) {</span>
+<span class="fc" id="L76">			throw new IllegalArgumentException(&quot;phone must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		if (!phone.matches(&quot;\\d{10}&quot;)) {</span>
+<span class="fc" id="L79">			throw new IllegalArgumentException(&quot;phone must be exactly 10 digits&quot;);</span>
+		}
+<span class="fc" id="L81">		return phone;</span>
+	}
+
+	private static String validateAddress(String address) {
+<span class="fc bfc" id="L85" title="All 2 branches covered.">		if (address == null) {</span>
+<span class="fc" id="L86">			throw new IllegalArgumentException(&quot;address must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L88" title="All 2 branches covered.">		if (address.length() &gt; 30) {</span>
+<span class="fc" id="L89">			throw new IllegalArgumentException(&quot;address must be 30 characters or fewer&quot;);</span>
+		}
+<span class="fc" id="L91">		return address;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

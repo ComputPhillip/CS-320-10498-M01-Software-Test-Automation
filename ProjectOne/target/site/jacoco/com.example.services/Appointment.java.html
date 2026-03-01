@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Appointment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">projectone</a> &gt; <a href="index.source.html" class="el_package">com.example.services</a> &gt; <span class="el_source">Appointment.java</span></div><h1>Appointment.java</h1><pre class="source lang-java linenums">package com.example.services;
+
+import java.util.Date;
+
+public final class Appointment {
+	private final String appointmentId;
+	private final Date appointmentDate;
+	private final String description;
+
+<span class="fc" id="L10">	public Appointment(String appointmentId, Date appointmentDate, String description) {</span>
+<span class="fc" id="L11">		this.appointmentId = validateId(appointmentId);</span>
+<span class="fc" id="L12">		this.appointmentDate = validateDate(appointmentDate);</span>
+<span class="fc" id="L13">		this.description = validateDescription(description);</span>
+<span class="fc" id="L14">	}</span>
+
+	public String getAppointmentId() {
+<span class="fc" id="L17">		return appointmentId;</span>
+	}
+
+	public Date getAppointmentDate() {
+<span class="fc" id="L21">		return new Date(appointmentDate.getTime());</span>
+	}
+
+	public String getDescription() {
+<span class="fc" id="L25">		return description;</span>
+	}
+
+	private static String validateId(String appointmentId) {
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		if (appointmentId == null) {</span>
+<span class="fc" id="L30">			throw new IllegalArgumentException(&quot;appointmentId must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L32" title="All 2 branches covered.">		if (appointmentId.length() &gt; 10) {</span>
+<span class="fc" id="L33">			throw new IllegalArgumentException(&quot;appointmentId must be 10 characters or fewer&quot;);</span>
+		}
+<span class="fc" id="L35">		return appointmentId;</span>
+	}
+
+	private static Date validateDate(Date appointmentDate) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		if (appointmentDate == null) {</span>
+<span class="fc" id="L40">			throw new IllegalArgumentException(&quot;appointmentDate must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L42" title="All 2 branches covered.">		if (appointmentDate.before(new Date())) {</span>
+<span class="fc" id="L43">			throw new IllegalArgumentException(&quot;appointmentDate must not be in the past&quot;);</span>
+		}
+<span class="fc" id="L45">		return new Date(appointmentDate.getTime());</span>
+	}
+
+	private static String validateDescription(String description) {
+<span class="fc bfc" id="L49" title="All 2 branches covered.">		if (description == null) {</span>
+<span class="fc" id="L50">			throw new IllegalArgumentException(&quot;description must not be null&quot;);</span>
+		}
+<span class="fc bfc" id="L52" title="All 2 branches covered.">		if (description.length() &gt; 50) {</span>
+<span class="fc" id="L53">			throw new IllegalArgumentException(&quot;description must be 50 characters or fewer&quot;);</span>
+		}
+<span class="fc" id="L55">		return description;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
